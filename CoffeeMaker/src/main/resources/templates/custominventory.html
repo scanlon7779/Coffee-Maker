@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Inventory</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/app.css" />
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+	
+</head>
+
+<body>
+
+    <script>
+		/*<![CDATA[*/
+		var app = angular.module('myApp', []);
+		app.controller('inventoryCtrl', function($scope, $http, $q) {
+			
+			$scope.inventoryOrigional = [];
+			
+			
+			$scope.getInventory = function() {
+				$http.get("/api/v1/inventory").then(function(response) {
+					$scope.inventoryOrigional = response.data.ingredients;
+					console.log($scope.inventoryOrigional);
+					$scope.reset();
+				}, function(rejection) {
+					console.error("Error while getting Inventory");
+				})
+			}
+
+			$scope.updateInventory = function() {
+				$scope.success = false;
+				$scope.failure = false;
+				
+				for (i = 0; i < $scope.inventory.length; i++) {
+					var newIngredients = {
+							name : $scope.inventory[i].name,
+							amount : $scope.inventory[i].amount
+						}
+						console.log(newIngredients)
+						$http.post("/api/v1/inventory", newIngredients).then(
+								function(success) {
+									$scope.success = true;
+									$scope.failure = false;
+									$scope.getInventory();
+								}, function(rejection) {
+									console.error("Error while adding ingredient");
+									$scope.failure = true;
+									$scope.success = false;
+									$scope.getInventory();
+								});
+				}
+
+				$scope.success = !($scope.failure);
+			}
+
+			$scope.submit = function() {
+				$scope.updateInventory();
+			}
+
+			
+			$scope.addIngredient = function(name, id) {
+				if (name != undefined) {
+					$scope.inventory.push({name : name})
+				}
+			}
+
+			$scope.reset = function() {
+				$scope.inventory = [];
+				
+				for (i = 0; i < $scope.inventoryOrigional.length; i++) {
+					$scope.addIngredient($scope.inventoryOrigional[i].name);
+				}
+				
+				
+			}
+			$scope.getInventory();
+
+
+		});
+		/*]]>*/
+	</script>
+
+	
+	<div class="generic-container ng-cloak" ng-app="myApp"
+		ng-controller="inventoryCtrl as ctrl">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<span class="lead">View Custom Inventory</span>
+			</div>
+			
+			<ul>
+				<li ng-repeat="ingredient in inventoryOrigional">
+					{{ingredient.name}}:  {{ingredient.amount}}
+						
+				</li>
+			</ul>
+			
+
+			<div class="panel-heading">
+				<span class="lead">Update Custom Inventory Form </span>
+			</div>
+			<div class="formcontainer">
+				<form ng-submit="submit()" name="addInventoryForm"
+					class="form-horizontal">
+					
+					<div ng-repeat="ingredient in inventory track by $index">
+	        			<div class="row">
+							<div class="form-group col-md-12">
+		       				 	<label class="col-md-2 control-lable" for="file">{{ingredient.name}}</label>
+		       				 	<div class="col-md-7">
+									<input type="text" ng-model="ingredient.amount" name="amount"
+										class="ingredient form-control input-sm"
+										placeholder="Enter ingredient quantity" required="0" />
+									<div class="has-error" ng-show="addRecipeForm.$dirty">
+										<span ng-show="addInventoryForm.ingredient.$error.required">This
+											is a required field</span> <span
+											ng-show="addInventoryForm.price.$error.min">Minimum amount
+											is 0</span> <span ng-show="addRecipeForm.price.$invalid">This
+											field is invalid </span>
+									</div>
+								</div>
+					        </div>
+   					     </div>
+   					 </div>
+   					 
+					<div class="row">
+						<div class="form-actions floatRight">
+							<input type="submit" value="Submit"
+								class="btn btn-primary btn-sm"
+								ng-disabled="addInventoryForm.$invalid" />
+							<button type="button" ng-click="reset()"
+								class="btn btn-warning btn-sm"
+								ng-disabled="addInventoryForm.$pristine">Reset Form</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div ng-show="success">Inventory Added</div>
+			<div ng-show="failure">Error while adding inventory.</div>
+			
+		</div>
+
+		<a href="/index">Home</a>
+	</div>
+
+
+
+</body>
+</html>

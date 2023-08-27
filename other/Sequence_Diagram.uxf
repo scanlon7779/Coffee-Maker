@@ -1,0 +1,65 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLGeneric</id><coordinates><x>119</x><y>0</y><w>100</w><h>30</h></coordinates><panel_attributes>_Front End_
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>310</x><y>1</y><w>140</w><h>30</h></coordinates><panel_attributes>_APIIngredientController_
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>529</x><y>0</y><w>100</w><h>30</h></coordinates><panel_attributes>_Ingredient_
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>21</y><w>30</w><h>670</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;650</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>21</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>51</y><w>230</w><h>40</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;
+createIngredient(ingredient)</panel_attributes><additional_attributes>10;20;210;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>370</x><y>791</y><w>20</w><h>660</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>21</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>91</y><w>230</w><h>40</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;
+Ingredient(name, quantity)</panel_attributes><additional_attributes>10;20;210;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>570</x><y>831</y><w>20</w><h>40</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>131</y><w>230</w><h>50</h></coordinates><panel_attributes>lt=&lt;..
+Throws Error Or Returns Null
+</panel_attributes><additional_attributes>10;20;210;20</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>141</y><w>30</w><h>540</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;520</additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>220</y><w>920</w><h>450</h></coordinates><panel_attributes>Duplicate Error Thrown
+
+
+
+__Else__
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>220</y><w>100</w><h>30</h></coordinates><panel_attributes>Alt
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>250</y><w>230</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+ResponseEntity</panel_attributes><additional_attributes>10;20;210;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>310</y><w>920</w><h>360</h></coordinates><panel_attributes>Invalid Quantity Error Thrown</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>310</y><w>100</w><h>30</h></coordinates><panel_attributes>Alt
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>350</y><w>230</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+ResponseEntity</panel_attributes><additional_attributes>10;20;210;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>400</y><w>100</w><h>30</h></coordinates><panel_attributes>Alt</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>400</y><w>910</w><h>270</h></coordinates><panel_attributes>No Error Thrown</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>470</y><w>230</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+ResponseEntity</panel_attributes><additional_attributes>10;20;210;20</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>701</y><w>30</w><h>770</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;750</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>781</y><w>230</w><h>40</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;
+editRecipe(recipe)</panel_attributes><additional_attributes>10;20;210;20</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>701</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>370</x><y>71</y><w>20</w><h>600</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>861</y><w>30</w><h>610</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;590</additional_attributes></element><element><id>UMLClass</id><coordinates><x>830</x><y>680</y><w>120</w><h>30</h></coordinates><panel_attributes>_RecipeRepository_
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>680</y><w>100</w><h>30</h></coordinates><panel_attributes>_Front End_
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>680</y><w>120</w><h>30</h></coordinates><panel_attributes>_APIRecipeController_
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>680</y><w>120</w><h>30</h></coordinates><panel_attributes>_RecipeService_
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>680</y><w>120</w><h>30</h></coordinates><panel_attributes>_Recipe_
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>701</y><w>30</w><h>770</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;750</additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>701</y><w>30</w><h>770</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;750</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>810</y><w>210</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+recipe.getName()</panel_attributes><additional_attributes>190;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>570</x><y>111</y><w>20</w><h>40</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>850</y><w>210</w><h>40</h></coordinates><panel_attributes>lt=&lt;..
+name</panel_attributes><additional_attributes>10;20;190;20</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>701</y><w>30</w><h>150</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>890</y><w>380</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+recipeService.findByName(name)</panel_attributes><additional_attributes>360;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>910</y><w>20</w><h>70</h></coordinates><panel_attributes>
+bg=orange
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>960</y><w>380</w><h>40</h></coordinates><panel_attributes>lt=&lt;..
+Recipe</panel_attributes><additional_attributes>10;20;360;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>880</x><y>930</y><w>20</w><h>40</h></coordinates><panel_attributes>
+bg=orange
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>910</y><w>170</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+RecipeRepository.findOne()</panel_attributes><additional_attributes>140;20;20;20</additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>940</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;..
+DomainObject</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>1000</y><w>920</w><h>450</h></coordinates><panel_attributes>[RecipeService.findByName() == null]
+
+
+[else]
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>1020</y><w>230</w><h>40</h></coordinates><panel_attributes>lt=&lt;..
+ResponseEntry</panel_attributes><additional_attributes>10;20;210;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>1000</y><w>90</w><h>30</h></coordinates><panel_attributes>Alt
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>1090</y><w>100</w><h>30</h></coordinates><panel_attributes>Alt
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>1060</y><w>950</w><h>30</h></coordinates><panel_attributes>lt=..</panel_attributes><additional_attributes>10;10;930;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>1090</y><w>900</w><h>350</h></coordinates><panel_attributes>No Error Thrown
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>1110</y><w>380</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+recipeRepository.delete(Recipe)</panel_attributes><additional_attributes>360;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>1130</y><w>20</w><h>70</h></coordinates><panel_attributes>
+bg=orange
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>880</x><y>1140</y><w>20</w><h>50</h></coordinates><panel_attributes>
+bg=orange
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>1120</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+RecipeRepository.deleteOne()</panel_attributes><additional_attributes>140;20;20;20</additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>1170</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;..
+void</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>1180</y><w>380</w><h>40</h></coordinates><panel_attributes>lt=&lt;..
+void</panel_attributes><additional_attributes>10;20;360;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>1230</y><w>20</w><h>70</h></coordinates><panel_attributes>
+bg=orange
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>880</x><y>1240</y><w>20</w><h>50</h></coordinates><panel_attributes>
+bg=orange
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>1210</y><w>380</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+save()</panel_attributes><additional_attributes>360;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>1220</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+save()</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>1270</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;..
+void</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>1280</y><w>380</w><h>40</h></coordinates><panel_attributes>lt=&lt;..
+void</panel_attributes><additional_attributes>10;20;360;20</additional_attributes></element></diagram>
